@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Imágenes y Enlaces</title>
+    <script>
+        function contarImagenes() {
+            const totalImagenes = document.getElementsByTagName('img').length;
+            alert('Número total de imágenes: ' + totalImagenes);
+        }
+
+        function contarEnlaces() {
+            const totalEnlaces = document.getElementsByTagName('a').length;
+            alert('Número total de enlaces: ' + totalEnlaces);
+        }
+    </script>
+</head>
+<body>
+
+
+<h2>Imágenes:</h2>
+<img src="imagen1.jpeg" alt="Imagen 1">
+<img src="imagen2.jpg" alt="Imagen 2">
+<img src="imagen3.jpg" alt="Imagen 3">
+
+<h2>Enlaces:</h2>
+<a href="https://www.youtube.com/watch?v=cEVuk-uZw7s">Enlace 1</a><br>
+<a href="https://tdbflamenco.wordpress.com/">Enlace 2</a><br>
+
+<button onclick="contarImagenes()">Número de Imágenes</button>
+<button onclick="contarEnlaces()">Número de Enlaces</button>
+
+</body>
+</html>

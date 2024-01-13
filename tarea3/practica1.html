@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página con Párrafos</title>
+    <script>
+        function agregarParrafo() {
+            const nuevoParrafo = document.createElement("p");
+            nuevoParrafo.textContent = "Párrafo añadido";
+            document.body.appendChild(nuevoParrafo);
+        }
+
+        function insertarParrafo() {
+            const nuevoParrafo = document.createElement("p");
+            nuevoParrafo.textContent = "Párrafo insertado";
+            const primerParrafo = document.querySelector("p");
+            primerParrafo.insertAdjacentElement('afterend', nuevoParrafo);
+        }
+
+        function reemplazarParrafo() {
+            const segundoParrafo = document.querySelectorAll("p")[1];
+            if (segundoParrafo) {
+                segundoParrafo.textContent = "Párrafo reemplazado";
+            }
+        }
+
+        function borrarParrafo() {
+            const segundoParrafo = document.querySelectorAll("p")[1];
+            if (segundoParrafo) {
+                segundoParrafo.remove();
+            }
+        }
+
+        function clonarDiv() {
+            const div = document.querySelector("div");
+            const clon = div.cloneNode(true);
+            document.body.appendChild(clon);
+        }
+
+    </script>
+</head>
+<body>
+
+<div>
+    <p>Este es mi primer párrafo</p>
+    <button onclick="agregarParrafo()">Añadir párrafo</button>
+    <button onclick="insertarParrafo()">Insertar párrafo</button>
+    <button onclick="reemplazarParrafo()">Reemplazar párrafo</button>
+    <button onclick="borrarParrafo()">Borrar párrafo</button>
+    <button onclick="clonarDiv()">Clonar div</button>
+</div>
+
+</body>
+</html>

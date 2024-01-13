@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información de la Página</title>
+</head>
+<body>
+
+<h3>Información de la Página:</h3>
+<p><strong>URL del documento actual:</strong> <span id="url"></span></p>
+<p><strong>Pathname de la página:</strong> <span id="pathname"></span></p>
+<p><strong>Protocolo utilizado:</strong> <span id="protocol"></span></p>
+
+<button onclick="irAGoogle()">Ir a Google</button>
+
+<script>
+   
+    document.getElementById('url').textContent = window.location.href;
+    document.getElementById('pathname').textContent = window.location.pathname;
+    document.getElementById('protocol').textContent = window.location.protocol;
+
+    function irAGoogle() {
+        window.location.href = "https://www.google.com";
+    }
+</script>
+
+</body>
+</html>

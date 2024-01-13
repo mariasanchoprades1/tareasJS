@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio de Tamaño de Texto</title>
+</head>
+<body>
+    <div onmouseover="aumentarTamaño(this)" onmouseout="restaurarTamaño(this)">
+        Al pasar por encima de este texto cambiará de tamaño PRACTICA 1 </div>
+    <script src="practica1.js"></script> 
+
+    <br/><br/>
+
+    <div id="texto">
+        Al pasar por encima de este texto cambiará de tamaño PRACTICA 2
+    </div>
+    <script src="practica2.js"></script>
+    
+    <br/><br/>
+
+    <div id="textoEvent">
+        Al pasar por encima de este texto cambiará de tamaño PRACTICA 3
+    </div>
+    <script src="practica3.js"></script>
+
+    <br/><br/>
+
+    <div id="textoListener">
+        Al pasar por encima de este texto cambiará de tamaño PRACTICA 4
+    </div>
+    <script src="practica4.js"></script>
+
+    <br/><br/>
+    <p>PRACTICA 5</p>
+    <form>
+        Introduce sólo números: 
+        <input type="text" id="campoNumeros" onkeypress="validarNumero(event)">
+    </form>
+    <script src="practica5.js"></script>
+    
+    <br/><br/>
+    <p>PRACTICA 6</p>    
+    <div id="contenedorBotones">
+        <button>Botón 1</button>
+        <button>Botón 2</button>
+        <button>Botón 3</button>
+    </div>
+    <script src="practica6.js"></script>
+
+    <br/><br/>
+    <p>PRACTICA 7 </p>   
+    <div id="reloj" style="font-size: 24px;"></div>
+    <script src="practica7.js"></script>
+
+    <!--  RELOJ 
+        //mensaje de alerta
+window.onload = function() {
+    alert("Página que contiene un reloj digital");
+    mostrarHora(); //hora actual
+    setInterval(mostrarHora, 1000); // actualizar la hora cada segundo
+};
+
+//mensaje alerta cuando se abandona la página
+window.onbeforeunload = function() {
+    return "Página cancelada";
+};
+
+//funcion para mostrar la hora actual
+function mostrarHora() {
+    var fecha = new Date();
+    var horas = fecha.getHours();
+    var minutos = fecha.getMinutes();
+    var segundos = fecha.getSeconds();
+
+    //horas, minutos y segundos tengan dos dígitos
+    if (horas < 10) horas = '0' + horas;
+    if (minutos < 10) minutos = '0' + minutos;
+    if (segundos < 10) segundos = '0' + segundos;
+
+    // Mostrar la hora
+    document.getElementById("reloj").textContent = horas + ':' + minutos + ':' + segundos;
+}
+
+    -->
+
+</body>
+</html>
+
+
+
+
+
+
+
+

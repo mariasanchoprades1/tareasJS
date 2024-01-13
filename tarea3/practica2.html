@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página con Animales</title>
+    <script>
+        function agregarElemento() {
+            const nuevoElemento = document.createElement("li");
+            nuevoElemento.textContent = "Ave"; 
+            document.querySelector("ul").appendChild(nuevoElemento);
+        }
+
+        function insertarElemento() {
+            const nuevoElemento = document.createElement("li");
+            nuevoElemento.textContent = "Serpiente"; 
+            const primerElemento = document.querySelector("li");
+            primerElemento.insertAdjacentElement('afterend', nuevoElemento);
+        }
+
+        function reemplazarElemento() {
+            const segundoElemento = document.querySelectorAll("li")[1];
+            if (segundoElemento) {
+                segundoElemento.textContent = "Iguana";
+            }
+        }
+
+        function borrarElemento() {
+            const segundoElemento = document.querySelectorAll("li")[1];
+            if (segundoElemento) {
+                segundoElemento.remove();
+            }
+        }
+
+        function crearSublistaDOM() {
+            const primerElemento = document.querySelector("li");
+            const nuevaLista = document.createElement("ul");
+            const nuevoElemento = document.createElement("li");
+            nuevoElemento.textContent = "Cachorro de león";
+            nuevaLista.appendChild(nuevoElemento);
+            primerElemento.appendChild(nuevaLista);
+        }
+
+        function crearSublistaInnerHTML() {
+            const primerElemento = document.querySelector("li");
+            primerElemento.innerHTML += "<ul><li>Cachorro de león</li></ul>";
+        }
+
+    </script>
+</head>
+<body>
+
+<ul>
+    <li>León</li>
+    <li>Tigre</li>
+    <li>Elefante</li>
+</ul>
+
+<button onclick="agregarElemento()">Añadir animal</button>
+<button onclick="insertarElemento()">Insertar animal</button>
+<button onclick="reemplazarElemento()">Reemplazar animal</button>
+<button onclick="borrarElemento()">Borrar animal</button>
+<button onclick="crearSublistaDOM()">Crear Sublista dentro de león con funciones DOM</button>
+<button onclick="crearSublistaInnerHTML()">Crear Sublista dentro de león con InnerHTML</button>
+
+</body>
+</html>
